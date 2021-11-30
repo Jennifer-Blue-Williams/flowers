@@ -16,18 +16,18 @@ const flowers = [
 const newFlower = {
     color: "Blue",
     species: "Lily",
-    price: 1.15
+    price: .89
 }
 
 
 const addFlower = (flowerObject) => {
-    const lastIndex = flowers.length - 1
-    const currentLastFlower = flowers[1]
-    const maxId = currentLastFlower.id
-    const idForNewFlower = maxId + 1
+    // const currentLastFlower = flowers[1]
+    // const maxId = currentLastFlower.id
+    // const idForNewFlower = maxId + 1
 
-    flowerObject.id = idForNewFlower
+    flowerObject.id = flowers.length =+
     flowers.push(flowerObject)
+
 
     
 
@@ -45,7 +45,7 @@ const addFlower = (flowerObject) => {
 
 }
 addFlower(newFlower);
-console.log(flowers)
+// console.log(flowers)
 
 
 const findExpensiveFlowers = () => {
@@ -58,12 +58,17 @@ const findExpensiveFlowers = () => {
         greater than or equal to 1.00, it should be
         added to the `expensiveFlowers` array.
     */
-
+for (flower of flowers) {
+    if (flower.price >= 1.00) {
+        expensiveFlowers.push(flower)
+    }
+}
 
 
 
     return expensiveFlowers  // Do not change this code
 }
+console.log(findExpensiveFlowers())
 
 
 
